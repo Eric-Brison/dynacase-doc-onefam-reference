@@ -4,3 +4,11 @@ book:
     version:          "3.2"
     edition:          "1"
     language:         fr
+    chapters: 
+        - number:   "1"
+          content:  "introduction.md"
+        - number:   "2"
+          content:  "installation.md"
+        - number:   "3"
+          content:  "specialisation.md"
+
