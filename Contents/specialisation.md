@@ -13,7 +13,7 @@ Créer une application
 
 La création d'une application dérivé de "ONEFAM" se base sur les mécanismes standard de création d'application de Dynacase Platform.
 
-Le fichier de déclaration de l'application "MYAPP.app", indique que l'application est basé sur ONEFAm (attribut "childof").
+Le fichier de déclaration de l'application "MYAPP.app", indique que l'application est basé sur ONEFAM (attribut "childof").
 
     [php]
     $app_desc = array (
@@ -49,9 +49,9 @@ Le menu proposé dépend de la famille sélectionnée par l'utilisateur. Il faut
 
 La barre de menus est décomposée en menu, eux même contenant des items, un item pouvant être un 'sous-menu'.
 
-### Déclaration de menus
+### Déclaration de menus {#onefam-ref:74007cb8-b50c-4672-921a-c6609c0674dd}
 
-#### La barre de menu
+#### La barre de menu {#onefam-ref:7003691a-3e00-42c7-8eb4-eef53f06a142}
 
 La définition de la barre de menu est faite via le paramètre applicatif _ONEFAM_MENU_ (dans le fichier _MYAPP_init.php.in_). Il contient un objet _menu_ encodé en JSON :
 
@@ -91,7 +91,7 @@ Il existe deux catégories de menu :
          ...
 
 
-#### Le menu
+#### Le menu {#onefam-ref:2efb458b-1511-4612-aeef-92bc26be2a62}
 
 La déclaration du menu est référencé par une clé _menu-key_. 
 
@@ -110,7 +110,7 @@ La déclaration du menu est référencé par une clé _menu-key_.
  
 Les caractéristiques du menu sont décrites au travers d'attributs (_voir paragraphe [Attributs menu]_)
 
-#### Bouton sur la barre de menu
+#### Bouton sur la barre de menu {#onefam-ref:c7bc3699-fec7-4e8b-81b2-3f4c805da27b}
 
 Il est possible d'ajouter un bouton sur la barre de menu. Pour cela, il suffit de déclarer un menu sans attribut _items_ et d'utiliser les attributs _url_ et _target_.
 
@@ -132,7 +132,7 @@ Il est possible d'ajouter un bouton sur la barre de menu. Pour cela, il suffit d
       ...
 
 
-#### Les items
+#### Les items {#onefam-ref:89a8adfd-0681-443e-a624-1b7606992988}
 
 La définition du contenu du menu consiste à déclarer et organiser les différents items qui le compose.
 
@@ -174,9 +174,9 @@ L'ajout d'un item de menu inactif (label séparateur par exemple), est exprimé 
 Un item de menu peut déclarer un attribut _items_. Il s'agit alors d'un sous-menu.
  
 
-### Règles générales
+### Règles générales {#onefam-ref:c43cbe0b-014e-4fdc-b874-86a6456cdad1}
            
-#### Attributs applicables aux menus et items
+#### Attributs applicables aux menus et items {#onefam-ref:7274a074-2639-4449-9e54-2a5630180679}
 
 *    **before** : _(menu)_  
 Positionner le menu avant celui indiqué par la valeur de l'attribut _before_
@@ -206,11 +206,11 @@ URL activée lors de la sélection par l'utilisateur de l'item de menu.
 Si l'url débute par le mot-clé _javascript:_ la partie suivant le mot-clé est évaluée en javascript. Dans ce cas, le contenu de l'attribut _target_ n'est pas utilisé.
 
 
-#### Traductions
+#### Traductions {#onefam-ref:51deb292-8424-435b-bab5-2dfba663cd7f}
 
 Les labels de menu ou d'item sont utilisés comme clé de traduction. Si une traduction est trouvée dans le catalogue, elle est affichée, sinon la clé est présentée. Les labels sont donc limités à des caractères us-ascii (non accentués).
 
-#### Les clés (menu et items)
+#### Les clés (menu et items) {#onefam-ref:177fc6b6-8d96-4616-8733-f2ad30277ac4}
 
 Les caractères utilisables pour les clés de menu ou d'item sont :
 
@@ -218,7 +218,7 @@ Les caractères utilisables pour les clés de menu ou d'item sont :
 * les chiffres
 * les caractères _ (trait bas), - (tiret)
 
-#### Utilisation d'attributs non réservés
+#### Utilisation d'attributs non réservés {#onefam-ref:7e12a44e-1835-4d17-b300-30d60098b20e}
 
 Vous pouvez utiliser des attributs _non réservés_ dans la définition de menu ou d'item.  Ils ne sont pas interprétés et produisent un attribut sur la balise HTML du menu ou de l'item.   
 Par exemple :
@@ -237,10 +237,10 @@ Par exemple :
 
 produira : `<a .... lang="FR_fr" ....>`.
 
-### Gestion de la barre de menu
+### Gestion de la barre de menu {#onefam-ref:f6b0a704-7121-4b6d-a4ca-3ea6f21ae0cb}
 
 
-#### Menus standard
+#### Menus standard {#onefam-ref:5e469d41-d441-44da-bd15-ed9a68d1ddbf}
 
 Par défaut, le menu suivant est mis en place :
 
@@ -265,7 +265,7 @@ Le menu **tools** est composé des items suivant :
 * **prefs** : préférences de présentation ONEFAM
 
 
-##### Ajout d'un item
+##### Ajout d'un item {#onefam-ref:28f9e1f6-1ae4-42f2-aabb-1f55d48dee45}
 
 Pour ajouter des items à un menu standard, il faut renseigner l'attribut "custom". Cet attribut fonctionne comme _items_. Les items définis seront placés suite aux items prédéfinis du menu standard.
  
@@ -287,7 +287,7 @@ L'exemple ci-dessous supprime _folders_ du menu standard _tools_ et lui ajoute u
                                ),
     ...
 
-##### Suppression d'un item
+##### Suppression d'un item {#onefam-ref:eb69041e-15a9-49c1-9d25-2b16fa0bd77f}
 
 La suppression d'un item est réalisée en le décrivant et en utilisant l'attribut _deleted_.
 
@@ -300,7 +300,7 @@ La suppression d'un item est réalisée en le décrivant et en utilisant l'attri
     ...
 
 
-##### Suppression d'un menu
+##### Suppression d'un menu {#onefam-ref:cdf25c4e-1618-44d1-8380-8f04852b549d}
 
 Pour supprimer un menu standard complètement, il doit être décrit dans la structure de spécification des menus. L'attribut _deleted_ est positionné à **all**.
 
@@ -312,11 +312,89 @@ Pour supprimer un menu standard complètement, il doit être décrit dans la str
                     ),
     ...
 
-#### Menus personnalisés
+#### Menus personnalisés {#onefam-ref:76fd4c60-f2d3-4905-b010-d0d5c93929fa}
 
 Les menus personnalisés sont adressés par le mot clé _customMenu_ dans la structure de déclaration des menus. 
 
-### Limites
+### Limites {#onefam-ref:3396ead5-946a-4784-ac68-e3782c70225f}
 
 * Il n'est pas possible de gérer le contenu d'un menu en fonction de droits applicatifs ou documentaires. 
 * La déclaration de menus présents pour toutes les familles n'est pas disponible.
+
+## Pagination {#onefam-ref:8781824f-8f46-42a6-ba69-3cb432cfe3d1}
+
+Comme la barre de menu, la pagination, située en bas de la liste de documents, est personnalisable. 
+Ce paragraphe décrit comment paramétrer une instance de ONEFAM pour gérer la forme et le contenu de la pagination.
+
+La pagination dépend de la famille sélectionnée par l'utilisateur, on peut donc avoir des paginations différentes suivant la famille sélectionnée.
+
+### Déclaration de la pagination {#onefam-ref:21c5e496-0c37-4269-87d4-7330eed9170b}
+La définition de la pagination est fait via le paramètre applicatif ONEFAM_FAMCONFIG  (dans le fichier MYAPP_init.php.in). Il contient un objet pagination encodé en JSON :
+
+    [php]
+    $familyConfiguration=array(
+      "*" => array("paginationType"=> "pageNumber"),
+      "FAM_1" => array("paginationType"=> "basic"),
+      "FAM_2" => array("paginationType"=> N_("%p%n%t%br-%er species of %nd total%t%f%l"),
+      );
+    $app_const = array(
+      ...
+      "ONEFAM_FAMCONFIG"=>json_encode($familyConfiguration),
+      ...
+      );
+
+Chaque famille est identifiée par son nom logique.
+
+On peut aussi utiliser le caractère spécial `*` pour signifier "toutes les familles".
+
+L'héritage des familles n'est pas pris en compte: chaque règle sera appliquée pour la famille choisie et pas ses dérivées.
+
+Si aucune règle n'est donnée pour une famille, et qu'il n'y a pas de règle spécifiée pour `*`, alors la règle [**"basic"**](#onefam-ref:b9da738e-bf9b-478a-9cd3-80a59a40a24d) sera appliquée.
+
+On peut configurer la pagination de deux façons différentes: 
+
+1. [Avec les règles dédiées](#onefam-ref:b9da738e-bf9b-478a-9cd3-80a59a40a24d)
+2. En écrivant soit même [la règle de personnalisation.](#onefam-ref:18ffc315-3b34-4d4a-bf2e-91b3e9ad222d)
+
+Chaque règle doit se trouver dans l'attribut paginationType du tableau de la famille.
+
+
+#### Définition des configurations {#onefam-ref:18ffc315-3b34-4d4a-bf2e-91b3e9ad222d}
+
+Pour écrire une règle, on peut utiliser des mots-clés dédiés. Ces mots-clés sont tous précédés d'un `%`. Tout élément contenu dans la règle qui n'est pas un mot-clé sera retranscrit tel quel sur l'interface. Cela permet, par exemple, de pouvoir rajouter du texte descriptif en plus.
+
+On peut traduire le texte affichable en entourant la chaîne de caractères par `N_()`. Il faudra faire attention à bien remettre tous les mots-clés à la bonne place dans la traduction.
+
+Les différents mots-clés sont:
+
+* **n**: (next) bouton représentant la flèche pour aller à la page suivante
+* **p**: (previous) bouton représentant la flèche pour aller à la page précédente
+* **l**: (last) bouton représentant la flèche pour aller à la dernière page
+* **f**: (first) bouton représentant la flèche pour aller à la première page
+* **np**: nombre de page
+* **cp**: numéro de la page
+* **nd**: nombre total de documents (prend en compte les recherches sélectionnées)
+* **br**: numéro du premier document de la liste (exemple: si on a trois éléments par page, que je suis sur la deuxième page, le **br** sera 4)
+* **er**: numéro du dernier document de la liste (exemple: si on a trois éléments par page, que je suis sur la deuxième page, et que cette page possède trois éléments,  le **er** sera 6)
+* **t**: tabulation
+
+La tabulation permet de séparer le pied de page en trois parties maximum (gauche, droite et centre). Si plus de deux tabulations sont utilisés, les tabulations supplémentaires ne seront pas prises en compte.
+
+L'ordre des mots-clés est important: ce sera l'ordre dans lequel ils seront affichés sur l'interface.
+
+Exemple:
+
+  `%f%l` affichera le bouton *first* avant le bouton *last* alors que `%l%f` affichera le bouton *last* avant le bouton *first*
+
+#### Les règles dédiées {#onefam-ref:b9da738e-bf9b-478a-9cd3-80a59a40a24d}
+
+Les règles dédiées sont:
+
+* **none**: `""`
+* **basic**: `"%p%t%t%n"`
+* **pageNumber**: `"%f%p%t%cp/%np%t%n%l"`
+* **documentNumber**: `N_("Showing %br to %er of %nr documents%t%t%p%n")`
+
+Si paginationType est à **"none"** aucune pagination ne sera affiché: quel que soit le nombre de document il n'y aura qu'une page affiché contenant le nombre de document défini par défaut. 
+
+Pour la règle  **"doucmentNumber"**, la chaîne affichée est traduite.
