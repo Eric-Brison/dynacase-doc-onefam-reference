@@ -1,7 +1,7 @@
 Spécialisation
 ==============
 
-L'application ONEFAM est conçue pour être dérivé. Elle peut être paramétrée pour obtenir une application spécialisée.
+L'application ONEFAM est conçue pour être dérivée. Elle peut être paramétrée pour obtenir une application spécialisée.
 Ce chapitre présente et détaille les mécanismes offerts dans cet objectif : 
 
 * création d'une application spécialisée
@@ -75,8 +75,8 @@ Chaque famille est identifiée par son *nom logique*.
 
 Il existe deux catégories de menu : 
 
-*    les menus 'standard' proposés par défaut par l'application _ONEFAM_ identifiés par le mot clé _standardMenu_ 
-*    les menus personnalisés que vous définissez pour l'application repérés par le mot clé _customMenu_
+*    les menus 'standard' proposés par défaut par l'application _ONEFAM_ identifiés par le mot-clef _standardMenu_ 
+*    les menus personnalisés que vous définissez pour l'application repérés par le mot-clef _customMenu_
 
 
         [php]
@@ -93,7 +93,7 @@ Il existe deux catégories de menu :
 
 #### Le menu {#onefam-ref:2efb458b-1511-4612-aeef-92bc26be2a62}
 
-La déclaration du menu est référencé par une clé _menu-key_. 
+La déclaration du menu est référencé par une clef _menu-key_. 
 
 
     [php]
@@ -164,10 +164,10 @@ La définition du contenu du menu consiste à déclarer et organiser les différ
                    )
      ...
 
-Dans l'exemple précédent, le menu _menu_key_ est composé de 2 items _wiki-fr_ et _wiki-en_, dont les libellés affichés sont générés par la traduction des clés, respectivement, _français_ et _english_. 
+Dans l'exemple précédent, le menu _menu_key_ est composé de 2 items _wiki-fr_ et _wiki-en_, dont les libellés affichés sont générés par la traduction des clefs, respectivement, _français_ et _english_. 
 En cliquant sur un des items, l'url spécifiée par l'attribut _url_ est affichée dans la fenêtre indiquée par l'attribut _target_.
 
-Au lieu de déclencher une URL, vous pouvez activer du code Javascript. Pour cela, l'expression de l'attribut _url_ doit débuter par le mot-clé _javascript:_. La partir de la valeur de l'attribut _url_ suivant le mot-clé est évalué. 
+Au lieu de déclencher une URL, vous pouvez activer du code Javascript. Pour cela, l'expression de l'attribut _url_ doit débuter par le mot-clef _javascript:_. La partir de la valeur de l'attribut _url_ suivant le mot-clef est évalué. 
 
 L'ajout d'un item de menu inactif (label séparateur par exemple), est exprimé en spécificiant un item de menu sans URL (_url_) à déclencher ni cible (_target_) ni item (_items_).
 
@@ -194,7 +194,7 @@ Il est possible de composer des sous-menu en déclarant des _items_ sur un item.
 Si l'attribut _items_ n'est pas présent (y compris sur un menu de premier niveau), le comportement du bouton est spécifié par les attributs : _url_ et _href_.
 
 *    **label** : _(menu|item)_  
-Clé de traduction du libellé présentée à l'utilisateur (cf. § Traductions).
+Clef de traduction du libellé présentée à l'utilisateur (cf. § Traductions).
 
 *    **target** : _(menu|item)_  
 Cible (fenêtre) dans laquelle l'URL déclenchée est affichée.  
@@ -203,16 +203,16 @@ Si la cible vaut *_self*, l'affichage se fait alors dans la fenêtre courante.
 
 *    **url** : _(menu|item)_  
 URL activée lors de la sélection par l'utilisateur de l'item de menu.   
-Si l'url débute par le mot-clé _javascript:_ la partie suivant le mot-clé est évaluée en javascript. Dans ce cas, le contenu de l'attribut _target_ n'est pas utilisé.
+Si l'url débute par le mot-clef _javascript:_ la partie suivant le mot-clef est évaluée en javascript. Dans ce cas, le contenu de l'attribut _target_ n'est pas utilisé.
 
 
 #### Traductions {#onefam-ref:51deb292-8424-435b-bab5-2dfba663cd7f}
 
-Les labels de menu ou d'item sont utilisés comme clé de traduction. Si une traduction est trouvée dans le catalogue, elle est affichée, sinon la clé est présentée. Les labels sont donc limités à des caractères us-ascii (non accentués).
+Les labels de menu ou d'item sont utilisés comme clef de traduction. Si une traduction est trouvée dans le catalogue, elle est affichée, sinon la clef est présentée. Les labels sont donc limités à des caractères us-ascii (non accentués).
 
-#### Les clés (menu et items) {#onefam-ref:177fc6b6-8d96-4616-8733-f2ad30277ac4}
+#### Les clefs (menu et items) {#onefam-ref:177fc6b6-8d96-4616-8733-f2ad30277ac4}
 
-Les caractères utilisables pour les clés de menu ou d'item sont :
+Les caractères utilisables pour les clefs de menu ou d'item sont :
 
 * les lettres majuscules, minuscules
 * les chiffres
@@ -252,7 +252,7 @@ Le menu **create** est composé dynamiquement en fonction des familles utilisée
 
 Le menu **sort** est lui aussi produit dynamiquement en fonction des attributs de la famille affichée notés comme triables. Il peut seulement être supprimé.
 
-**Note** : Les menus de filtre par énumérés sont affichés/non affichés via l'option "bmenu=yes/no" de l'attribut. La clé de l'item du menu est le nom de l'attribut énuméré. Ils peuvent seulement être supprimés.
+**Note** : Les menus de filtre par énumérés sont affichés/non affichés via l'option "bmenu=yes/no" de l'attribut. La clef de l'item du menu est le nom de l'attribut énuméré. Ils peuvent seulement être supprimés.
 
 
 Le menu **tools** est composé des items suivant :
@@ -314,7 +314,7 @@ Pour supprimer un menu standard complètement, il doit être décrit dans la str
 
 #### Menus personnalisés {#onefam-ref:76fd4c60-f2d3-4905-b010-d0d5c93929fa}
 
-Les menus personnalisés sont adressés par le mot clé _customMenu_ dans la structure de déclaration des menus. 
+Les menus personnalisés sont adressés par le mot clef _customMenu_ dans la structure de déclaration des menus. 
 
 ### Limites {#onefam-ref:3396ead5-946a-4784-ac68-e3782c70225f}
 
@@ -329,7 +329,7 @@ Ce paragraphe décrit comment paramétrer une instance de ONEFAM pour gérer la 
 La pagination dépend de la famille sélectionnée par l'utilisateur, on peut donc avoir des paginations différentes suivant la famille sélectionnée.
 
 ### Déclaration de la pagination {#onefam-ref:21c5e496-0c37-4269-87d4-7330eed9170b}
-La définition de la pagination est fait via le paramètre applicatif ONEFAM_FAMCONFIG  (dans le fichier MYAPP_init.php.in). Il contient un objet pagination encodé en JSON :
+La définition de la pagination est fait via le paramètre applicatif `ONEFAM_FAMCONFIG`  (dans le fichier MYAPP_init.php.in). Il contient un objet pagination encodé en JSON :
 
     [php]
     $familyConfiguration=array(
@@ -345,56 +345,60 @@ La définition de la pagination est fait via le paramètre applicatif ONEFAM_FAM
 
 Chaque famille est identifiée par son nom logique.
 
-On peut aussi utiliser le caractère spécial `*` pour signifier "toutes les familles".
+Le caractère spécial `*` signifie "toutes les familles".
 
-L'héritage des familles n'est pas pris en compte: chaque règle sera appliquée pour la famille choisie et pas ses dérivées.
+L'héritage des familles n'est pas pris en compte: chaque règle sera appliquée pour la famille choisie et pas pour ses dérivées.
 
 Si aucune règle n'est donnée pour une famille, et qu'il n'y a pas de règle spécifiée pour `*`, alors la règle [**"basic"**](#onefam-ref:b9da738e-bf9b-478a-9cd3-80a59a40a24d) sera appliquée.
 
-On peut configurer la pagination de deux façons différentes: 
+La pagination peut être configurée de deux manières :
 
-1. [Avec les règles dédiées](#onefam-ref:b9da738e-bf9b-478a-9cd3-80a59a40a24d)
+1. [Avec les règles prédéfinies](#onefam-ref:b9da738e-bf9b-478a-9cd3-80a59a40a24d)
 2. En écrivant soit même [la règle de personnalisation.](#onefam-ref:18ffc315-3b34-4d4a-bf2e-91b3e9ad222d)
 
-Chaque règle doit se trouver dans l'attribut paginationType du tableau de la famille.
+Chaque règle doit se trouver dans l'attribut `paginationType` du tableau de l'objet de configuration correspondant à la famille.
 
 
 #### Définition des configurations {#onefam-ref:18ffc315-3b34-4d4a-bf2e-91b3e9ad222d}
 
-Pour écrire une règle, on peut utiliser des mots-clés dédiés. Ces mots-clés sont tous précédés d'un `%`. Tout élément contenu dans la règle qui n'est pas un mot-clé sera retranscrit tel quel sur l'interface. Cela permet, par exemple, de pouvoir rajouter du texte descriptif en plus.
+Pour écrire une règle, on peut utiliser des mots-clefs dédiés. Ces mots-clefs sont tous précédés d'un `%`. Tout élément contenu dans la règle qui n'est pas un mot-clef sera retranscrit tel quel sur l'interface. Cela permet, par exemple, de pouvoir rajouter du texte descriptif en plus.
 
-On peut traduire le texte affichable en entourant la chaîne de caractères par `N_()`. Il faudra faire attention à bien remettre tous les mots-clés à la bonne place dans la traduction.
+Le texte affichable fait l'objet d'une traduction si l'entrée correspondante est trouvé dans le catalogue. Pour ajouter l'entrée au catalogue, il faut utiliser la fonction `N_()`. Lors de la traduction, l'ordre des mots et des mot-clefs peut être changé. 
 
-Les différents mots-clés sont:
+Les différents mots-clefs sont:
 
 * **n**: (next) bouton représentant la flèche pour aller à la page suivante
 * **p**: (previous) bouton représentant la flèche pour aller à la page précédente
 * **l**: (last) bouton représentant la flèche pour aller à la dernière page
 * **f**: (first) bouton représentant la flèche pour aller à la première page
-* **np**: nombre de page
-* **cp**: numéro de la page
-* **nd**: nombre total de documents (prend en compte les recherches sélectionnées)
-* **br**: numéro du premier document de la liste (exemple: si on a trois éléments par page, que je suis sur la deuxième page, le **br** sera 4)
-* **er**: numéro du dernier document de la liste (exemple: si on a trois éléments par page, que je suis sur la deuxième page, et que cette page possède trois éléments,  le **er** sera 6)
+* **np**: (number of pages) nombre de page
+* **cp**: (current page) numéro de la page
+* **nd**: (number of documents) nombre total de documents (prend en compte les recherches sélectionnées)
+* **br**: (begin rank) numéro du premier document de la liste (exemple: si on a trois éléments par page, que je suis sur la deuxième page, le **br** sera 4)
+* **er**: (end rank) numéro du dernier document de la liste (exemple: si on a trois éléments par page, que je suis sur la deuxième page, et que cette page possède trois éléments,  le **er** sera 6)
 * **t**: tabulation
 
-La tabulation permet de séparer le pied de page en trois parties maximum (gauche, droite et centre). Si plus de deux tabulations sont utilisés, les tabulations supplémentaires ne seront pas prises en compte.
+La tabulation permet de séparer le pied de page en trois parties maximum (gauche, centre et droite). Si plus de deux tabulations sont utilisés, les tabulations supplémentaires ne seront pas prises en compte.
 
-L'ordre des mots-clés est important: ce sera l'ordre dans lequel ils seront affichés sur l'interface.
+L'ordre des mots-clefs est important: ce sera l'ordre dans lequel ils seront affichés sur l'interface.
 
 Exemple:
 
   `%f%l` affichera le bouton *first* avant le bouton *last* alors que `%l%f` affichera le bouton *last* avant le bouton *first*
 
-#### Les règles dédiées {#onefam-ref:b9da738e-bf9b-478a-9cd3-80a59a40a24d}
+#### Les règles prédéfinies {#onefam-ref:b9da738e-bf9b-478a-9cd3-80a59a40a24d}
 
-Les règles dédiées sont:
+Les règles prédéfinies sont:
 
 * **none**: `""`
 * **basic**: `"%p%t%t%n"`
 * **pageNumber**: `"%f%p%t%cp/%np%t%n%l"`
 * **documentNumber**: `N_("Showing %br to %er of %nr documents%t%t%p%n")`
 
-Si paginationType est à **"none"** aucune pagination ne sera affiché: quel que soit le nombre de document il n'y aura qu'une page affiché contenant le nombre de document défini par défaut. 
+Si paginationType est à **"none"** aucune pagination ne sera affichée: quel que soit le nombre de documents il n'y aura qu'une page affichée contenant le nombre de documents défini par défaut (paramètre `GENERIC / CARD_SLICE_LIST`). 
 
-Pour la règle  **"doucmentNumber"**, la chaîne affichée est traduite.
+Pour la règle  **"documentNumber"**, la chaîne affichée est traduite.
+
+#### Pagination et performance
+
+Si la règle de pagination contient un des mot-clefs suivants : `%f`,`%l`,` %er`,`%np`,`%nd`, alors une requête supplémentaire sera envoyée afin d'avoir le nombre de document total. Le coût de cette requête est fonction du nombre de documents à inspecter et de la complexité du filtre. Ce temps supplémentaire représente entre 3 et 60% du temps de la requête initiale. Cette variation dépend essentiellement de la complexité du filtre.
