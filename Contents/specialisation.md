@@ -79,8 +79,8 @@ Il existe deux catégories de menu :
 *    les menus personnalisés que vous définissez pour l'application repérés par le mot-clef _customMenu_
 
 
-        [php]
-        "my_family" => array(
+    [php]
+    "my_family" => array(
                "standardMenu" => array(
                                  .... menus declaration ...
                                   ),
@@ -329,7 +329,7 @@ Ce paragraphe décrit comment paramétrer une instance de ONEFAM pour gérer la 
 La pagination dépend de la famille sélectionnée par l'utilisateur, on peut donc avoir des paginations différentes suivant la famille sélectionnée.
 
 ### Déclaration de la pagination {#onefam-ref:21c5e496-0c37-4269-87d4-7330eed9170b}
-La définition de la pagination est fait via le paramètre applicatif `ONEFAM_FAMCONFIG`  (dans le fichier MYAPP_init.php.in). Il contient un objet pagination encodé en JSON :
+La définition de la pagination est faite via le paramètre applicatif `ONEFAM_FAMCONFIG`  (dans le fichier MYAPP_init.php.in). Il contient un objet pagination encodé en JSON :
 
     [php]
     $familyConfiguration=array(
