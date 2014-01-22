@@ -1,7 +1,43 @@
 # Paramétrage de la gestion des recherches
 
-De nouvelles recherches peuvent être créées depuis l'interface de "Gestion des
-recherches" disponible depuis le menu "Outils/Gérer mes recherches".
+## Introduction
+
+Des recherches enregistrées sont accessibles depuis l'interface de recherche de
+ONEFAM. 
+
+De nouvelles recherches peuvent être créées depuis l'interface de
+"Gestion des recherches" disponible depuis le menu "Outils/Gérer mes
+recherches".
+
+Seules les recherches partagées et les recherches utilisateur indiquées sont
+visibles depuis l'interface de recherche de ONEFAM.
+
+### La recherche partagée
+
+La recherche (ou un rapport) est partagée lorsqu'elle est insérée dans le
+dossier "racine" de la famille. Toute recherche visible et exécutable (droit
+`view` et `execute`) présente dans ce dossier est affichée dans le sélecteur.
+
+*Note* : Il est possible d'indiquer des recherches partagées qui recherche des
+documents autres que ceux de la famille du dossier "racine".
+
+Pour ajouter ou enlever une recherche du dossier "racine", il est nécessaire de
+posséder le droit `modify` (modifier le contenu) sur ce dossier. Le dossier
+"racine" est accessible depuis le document de la famille. La référence du
+dossier "racine" est indiqué par la propriété `dfldid` de la famille.
+
+### La recherche utilisateur
+
+Les recherches portant sur la famille et dont le propriétaire (propriété
+`owner`) est l'utilisateur connecté sont affichées.
+
+En plus de cette condition, il est nécessaire que dans le document
+"*recherche*", l'attribut "*à utiliser dans les menus*" vaille "*oui*".
+
+Si la préférence "*montrer les sous-familles*" est cochée, alors les recherches
+portant sur les sous-familles sont aussi affichées.
+
+## Paramétrage des familles de création de recherche 
 
 Par défaut, seules des recherches de la famille "recherche détaillée"
 (`DSEARCH`) et de la famille "rapport" (`REPORT`) peuvent être créées.
