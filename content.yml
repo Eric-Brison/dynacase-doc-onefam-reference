@@ -2,7 +2,7 @@ book:
     title:            "Guide d'intégration"
     module:           "Une famille (ONEFAM)"
     version:          "3.2"
-    edition:          "1"
+    edition:          "2"
     language:         fr
     chapters: 
         - number:   "1"
@@ -11,4 +11,16 @@ book:
           content:  "installation.md"
         - number:   "3"
           content:  "specialisation.md"
+          subtoc:   2
+        - content:  "specapplication.md"
+          level:   2
+        - content:  "specmenu.md"
+          level:   2
+        - content:  "specpagination.md"
+          level:   2
+        - content:  "specsearchconfig.md"
+          level:   2 
+          flags:
+            new: "new"
+            next-release: "3.2.11"
 
