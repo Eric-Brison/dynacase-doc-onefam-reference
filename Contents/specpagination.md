@@ -102,7 +102,7 @@ de documents défini par défaut (paramètre `GENERIC / CARD_SLICE_LIST`).
 
 Pour la règle  **"documentNumber"**, la chaîne affichée est traduite.
 
-### Pagination et performance
+### Pagination et performance {#onefam-ref:0ba62ebe-8d39-4832-955b-46fe462d4f3c}
 
 Si la règle de pagination contient un des mot-clefs suivants : `%f`,`%l`,`
 %er`,`%np`,`%nd`, alors une requête supplémentaire sera envoyée afin d'avoir le

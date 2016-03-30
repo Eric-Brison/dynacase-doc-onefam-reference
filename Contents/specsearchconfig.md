@@ -1,6 +1,6 @@
-# Paramétrage de la gestion des recherches
+# Paramétrage de la gestion des recherches {#onefam-ref:f9e4f80d-8e63-429b-9871-87f0128e719b}
 
-## Introduction
+## Introduction {#onefam-ref:4956b1d7-b24f-4733-a470-f8f924ae544f}
 
 Des recherches enregistrées sont accessibles depuis l'interface de recherche de
 ONEFAM. 
@@ -12,7 +12,7 @@ recherches".
 Seules les recherches partagées et les recherches utilisateur indiquées sont
 visibles depuis l'interface de recherche de ONEFAM.
 
-### La recherche partagée
+### La recherche partagée {#onefam-ref:91975e1e-643f-40a8-98cb-edbb0f88f75a}
 
 La recherche (ou un rapport) est partagée lorsqu'elle est insérée dans le
 dossier "racine" de la famille. Toute recherche visible et exécutable (droit
@@ -26,7 +26,7 @@ posséder le droit `modify` (modifier le contenu) sur ce dossier. Le dossier
 "racine" est accessible depuis le document de la famille. La référence du
 dossier "racine" est indiqué par la propriété `dfldid` de la famille.
 
-### La recherche utilisateur
+### La recherche utilisateur {#onefam-ref:772578df-cc86-4ec9-aaaa-3960ba55e71a}
 
 Les recherches portant sur la famille et dont le propriétaire (propriété
 `owner`) est l'utilisateur connecté sont affichées.
@@ -37,7 +37,7 @@ En plus de cette condition, il est nécessaire que dans le document
 Si la préférence "*montrer les sous-familles*" est cochée, alors les recherches
 portant sur les sous-familles sont aussi affichées.
 
-## Paramétrage des familles de création de recherche 
+## Paramétrage des familles de création de recherche  {#onefam-ref:287dcb72-a5e8-44fa-95b1-9a495199be80}
 
 Par défaut, seules des recherches de la famille "recherche détaillée"
 (`DSEARCH`) et de la famille "rapport" (`REPORT`) peuvent être créées.

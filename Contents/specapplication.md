@@ -1,4 +1,4 @@
-# Créer une application
+# Créer une application {#onefam-ref:274ddc62-dd00-4bbb-b4e9-56fc698d66dc}
 
 La création d'une application dérivé de "ONEFAM" se base sur les mécanismes
 standard de création d'application de Dynacase Platform.
