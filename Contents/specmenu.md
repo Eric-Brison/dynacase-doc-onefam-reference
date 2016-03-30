@@ -1,4 +1,4 @@
-# Barre de menu
+# Barre de menu {#onefam-ref:1bcf5cd6-72f6-4656-9732-eeccfbf3faf4}
 
 La barre de menu, présente en haut de la liste de documents, peut être
 entièrement personnalisée : ajout ou suppression de menus et d'items de menu. Ce
