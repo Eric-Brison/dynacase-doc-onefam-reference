@@ -21,7 +21,4 @@ book:
           level:   2
         - content:  "specsearchconfig.md"
           level:   2 
-          flags:
-            new: "new"
-            next-release: "3.2.11"
 
